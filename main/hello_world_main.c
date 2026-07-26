@@ -13,7 +13,7 @@
 #include "esp_flash.h"
 #include "esp_system.h"
 
-void app_main(void)
+void hello_world_app_main(void)
 {
     int count = 0;
 
