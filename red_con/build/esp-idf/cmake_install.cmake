@@ -279,6 +279,16 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("C:/Users/Administrator/Desktop/esp32/red_con/build/esp-idf/esp_hal_ledc/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/Administrator/Desktop/esp32/red_con/build/esp-idf/esp_driver_ledc/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("C:/Users/Administrator/Desktop/esp32/red_con/build/esp-idf/main/cmake_install.cmake")
 endif()
 

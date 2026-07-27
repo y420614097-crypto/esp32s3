@@ -86,4 +86,8 @@ C:/Users/Administrator/Desktop/esp32/red_con/build/esp-idf/freertos/libfreertos.
 C:/Users/Administrator/Desktop/esp32/red_con/build/esp-idf/esp_libc/libesp_libc.a
 C:/Users/Administrator/Desktop/esp32/red_con/build/esp-idf/pthread/libpthread.a
 C:/Users/Administrator/Desktop/esp32/red_con/build/esp-idf/cxx/libcxx.a
+C:/Users/Administrator/Desktop/esp32/red_con/build/esp-idf/esp_hal_ledc/libesp_hal_ledc.a
+C:/Users/Administrator/Desktop/esp32/red_con/build/esp-idf/esp_driver_ledc/libesp_driver_ledc.a
+C:/Users/Administrator/Desktop/esp32/red_con/build/esp-idf/esp_hal_ledc/libesp_hal_ledc.a
 C:/Users/Administrator/Desktop/esp32/red_con/build/esp-idf/main/libmain.a
+C:/Users/Administrator/Desktop/esp32/red_con/build/esp-idf/esp_driver_ledc/libesp_driver_ledc.a

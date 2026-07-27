@@ -1,7 +1,7 @@
 {
     "version":            "1.3",
     "project_name":       "led_blink",
-    "project_version":    "1",
+    "project_version":    "af450e1-dirty",
     "project_path":       "C:/Users/Administrator/Desktop/esp32/red_con",
     "idf_path":           "C:/esp/v6.0.2/esp-idf",
     "build_dir":          "C:/Users/Administrator/Desktop/esp32/red_con/build",
@@ -21,12 +21,12 @@
     "monitor_toolprefix": "xtensa-esp32s3-elf-",
     "c_compiler":         "C:/Users/Administrator/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc.exe",
     "config_environment" : {
-        "COMPONENT_KCONFIGS" : "C:/esp/v6.0.2/esp-idf/components/efuse/Kconfig;C:/esp/v6.0.2/esp-idf/components/esp_common/Kconfig;C:/esp/v6.0.2/esp-idf/components/esp_driver_dma/Kconfig;C:/esp/v6.0.2/esp-idf/components/esp_driver_gpio/Kconfig;C:/esp/v6.0.2/esp-idf/components/esp_hw_support/Kconfig;C:/esp/v6.0.2/esp-idf/components/esp_libc/Kconfig;C:/esp/v6.0.2/esp-idf/components/esp_mm/Kconfig;C:/esp/v6.0.2/esp-idf/components/esp_partition/Kconfig;C:/esp/v6.0.2/esp-idf/components/esp_pm/Kconfig;C:/esp/v6.0.2/esp-idf/components/esp_rom/Kconfig;C:/esp/v6.0.2/esp-idf/components/esp_security/Kconfig;C:/esp/v6.0.2/esp-idf/components/esp_stdio/Kconfig;C:/esp/v6.0.2/esp-idf/components/esp_system/Kconfig;C:/esp/v6.0.2/esp-idf/components/esp_timer/Kconfig;C:/esp/v6.0.2/esp-idf/components/freertos/Kconfig;C:/esp/v6.0.2/esp-idf/components/hal/Kconfig;C:/esp/v6.0.2/esp-idf/components/heap/Kconfig;C:/esp/v6.0.2/esp-idf/components/log/Kconfig;C:/esp/v6.0.2/esp-idf/components/mbedtls/Kconfig;C:/esp/v6.0.2/esp-idf/components/pthread/Kconfig;C:/esp/v6.0.2/esp-idf/components/soc/Kconfig;C:/esp/v6.0.2/esp-idf/components/spi_flash/Kconfig",
+        "COMPONENT_KCONFIGS" : "C:/esp/v6.0.2/esp-idf/components/efuse/Kconfig;C:/esp/v6.0.2/esp-idf/components/esp_common/Kconfig;C:/esp/v6.0.2/esp-idf/components/esp_driver_dma/Kconfig;C:/esp/v6.0.2/esp-idf/components/esp_driver_gpio/Kconfig;C:/esp/v6.0.2/esp-idf/components/esp_driver_ledc/Kconfig;C:/esp/v6.0.2/esp-idf/components/esp_hw_support/Kconfig;C:/esp/v6.0.2/esp-idf/components/esp_libc/Kconfig;C:/esp/v6.0.2/esp-idf/components/esp_mm/Kconfig;C:/esp/v6.0.2/esp-idf/components/esp_partition/Kconfig;C:/esp/v6.0.2/esp-idf/components/esp_pm/Kconfig;C:/esp/v6.0.2/esp-idf/components/esp_rom/Kconfig;C:/esp/v6.0.2/esp-idf/components/esp_security/Kconfig;C:/esp/v6.0.2/esp-idf/components/esp_stdio/Kconfig;C:/esp/v6.0.2/esp-idf/components/esp_system/Kconfig;C:/esp/v6.0.2/esp-idf/components/esp_timer/Kconfig;C:/esp/v6.0.2/esp-idf/components/freertos/Kconfig;C:/esp/v6.0.2/esp-idf/components/hal/Kconfig;C:/esp/v6.0.2/esp-idf/components/heap/Kconfig;C:/esp/v6.0.2/esp-idf/components/log/Kconfig;C:/esp/v6.0.2/esp-idf/components/mbedtls/Kconfig;C:/esp/v6.0.2/esp-idf/components/pthread/Kconfig;C:/esp/v6.0.2/esp-idf/components/soc/Kconfig;C:/esp/v6.0.2/esp-idf/components/spi_flash/Kconfig",
         "COMPONENT_KCONFIGS_PROJBUILD" : "C:/esp/v6.0.2/esp-idf/components/app_update/Kconfig.projbuild;C:/esp/v6.0.2/esp-idf/components/bootloader/Kconfig.projbuild;C:/esp/v6.0.2/esp-idf/components/esp_app_format/Kconfig.projbuild;C:/esp/v6.0.2/esp-idf/components/esp_rom/Kconfig.projbuild;C:/esp/v6.0.2/esp-idf/components/esptool_py/Kconfig.projbuild;C:/esp/v6.0.2/esp-idf/components/partition_table/Kconfig.projbuild"
     },
     "common_component_reqs": [ "cxx", "esp_libc", "freertos", "esp_hw_support", "heap", "log", "soc", "hal", "esp_rom", "esp_common", "esp_system", "esp_stdio", "xtensa" ],
-    "build_components" : [ "app_update", "bootloader", "bootloader_support", "cxx", "efuse", "esp_app_format", "esp_blockdev", "esp_bootloader_format", "esp_common", "esp_driver_dma", "esp_driver_gpio", "esp_hal_ana_conv", "esp_hal_clock", "esp_hal_dma", "esp_hal_gpio", "esp_hal_gpspi", "esp_hal_i2s", "esp_hal_mspi", "esp_hal_pmu", "esp_hal_rtc_timer", "esp_hal_security", "esp_hal_timg", "esp_hal_touch_sens", "esp_hal_uart", "esp_hal_usb", "esp_hal_wdt", "esp_hw_support", "esp_libc", "esp_mm", "esp_partition", "esp_pm", "esp_rom", "esp_security", "esp_stdio", "esp_system", "esp_timer", "esp_usb_cdc_rom_console", "esptool_py", "freertos", "hal", "heap", "log", "main", "mbedtls", "partition_table", "pthread", "soc", "spi_flash", "xtensa", "" ],
-    "build_component_paths" : [ "C:/esp/v6.0.2/esp-idf/components/app_update", "C:/esp/v6.0.2/esp-idf/components/bootloader", "C:/esp/v6.0.2/esp-idf/components/bootloader_support", "C:/esp/v6.0.2/esp-idf/components/cxx", "C:/esp/v6.0.2/esp-idf/components/efuse", "C:/esp/v6.0.2/esp-idf/components/esp_app_format", "C:/esp/v6.0.2/esp-idf/components/esp_blockdev", "C:/esp/v6.0.2/esp-idf/components/esp_bootloader_format", "C:/esp/v6.0.2/esp-idf/components/esp_common", "C:/esp/v6.0.2/esp-idf/components/esp_driver_dma", "C:/esp/v6.0.2/esp-idf/components/esp_driver_gpio", "C:/esp/v6.0.2/esp-idf/components/esp_hal_ana_conv", "C:/esp/v6.0.2/esp-idf/components/esp_hal_clock", "C:/esp/v6.0.2/esp-idf/components/esp_hal_dma", "C:/esp/v6.0.2/esp-idf/components/esp_hal_gpio", "C:/esp/v6.0.2/esp-idf/components/esp_hal_gpspi", "C:/esp/v6.0.2/esp-idf/components/esp_hal_i2s", "C:/esp/v6.0.2/esp-idf/components/esp_hal_mspi", "C:/esp/v6.0.2/esp-idf/components/esp_hal_pmu", "C:/esp/v6.0.2/esp-idf/components/esp_hal_rtc_timer", "C:/esp/v6.0.2/esp-idf/components/esp_hal_security", "C:/esp/v6.0.2/esp-idf/components/esp_hal_timg", "C:/esp/v6.0.2/esp-idf/components/esp_hal_touch_sens", "C:/esp/v6.0.2/esp-idf/components/esp_hal_uart", "C:/esp/v6.0.2/esp-idf/components/esp_hal_usb", "C:/esp/v6.0.2/esp-idf/components/esp_hal_wdt", "C:/esp/v6.0.2/esp-idf/components/esp_hw_support", "C:/esp/v6.0.2/esp-idf/components/esp_libc", "C:/esp/v6.0.2/esp-idf/components/esp_mm", "C:/esp/v6.0.2/esp-idf/components/esp_partition", "C:/esp/v6.0.2/esp-idf/components/esp_pm", "C:/esp/v6.0.2/esp-idf/components/esp_rom", "C:/esp/v6.0.2/esp-idf/components/esp_security", "C:/esp/v6.0.2/esp-idf/components/esp_stdio", "C:/esp/v6.0.2/esp-idf/components/esp_system", "C:/esp/v6.0.2/esp-idf/components/esp_timer", "C:/esp/v6.0.2/esp-idf/components/esp_usb_cdc_rom_console", "C:/esp/v6.0.2/esp-idf/components/esptool_py", "C:/esp/v6.0.2/esp-idf/components/freertos", "C:/esp/v6.0.2/esp-idf/components/hal", "C:/esp/v6.0.2/esp-idf/components/heap", "C:/esp/v6.0.2/esp-idf/components/log", "C:/Users/Administrator/Desktop/esp32/red_con/main", "C:/esp/v6.0.2/esp-idf/components/mbedtls", "C:/esp/v6.0.2/esp-idf/components/partition_table", "C:/esp/v6.0.2/esp-idf/components/pthread", "C:/esp/v6.0.2/esp-idf/components/soc", "C:/esp/v6.0.2/esp-idf/components/spi_flash", "C:/esp/v6.0.2/esp-idf/components/xtensa", "" ],
+    "build_components" : [ "app_update", "bootloader", "bootloader_support", "cxx", "efuse", "esp_app_format", "esp_blockdev", "esp_bootloader_format", "esp_common", "esp_driver_dma", "esp_driver_gpio", "esp_driver_ledc", "esp_hal_ana_conv", "esp_hal_clock", "esp_hal_dma", "esp_hal_gpio", "esp_hal_gpspi", "esp_hal_i2s", "esp_hal_ledc", "esp_hal_mspi", "esp_hal_pmu", "esp_hal_rtc_timer", "esp_hal_security", "esp_hal_timg", "esp_hal_touch_sens", "esp_hal_uart", "esp_hal_usb", "esp_hal_wdt", "esp_hw_support", "esp_libc", "esp_mm", "esp_partition", "esp_pm", "esp_rom", "esp_security", "esp_stdio", "esp_system", "esp_timer", "esp_usb_cdc_rom_console", "esptool_py", "freertos", "hal", "heap", "log", "main", "mbedtls", "partition_table", "pthread", "soc", "spi_flash", "xtensa", "" ],
+    "build_component_paths" : [ "C:/esp/v6.0.2/esp-idf/components/app_update", "C:/esp/v6.0.2/esp-idf/components/bootloader", "C:/esp/v6.0.2/esp-idf/components/bootloader_support", "C:/esp/v6.0.2/esp-idf/components/cxx", "C:/esp/v6.0.2/esp-idf/components/efuse", "C:/esp/v6.0.2/esp-idf/components/esp_app_format", "C:/esp/v6.0.2/esp-idf/components/esp_blockdev", "C:/esp/v6.0.2/esp-idf/components/esp_bootloader_format", "C:/esp/v6.0.2/esp-idf/components/esp_common", "C:/esp/v6.0.2/esp-idf/components/esp_driver_dma", "C:/esp/v6.0.2/esp-idf/components/esp_driver_gpio", "C:/esp/v6.0.2/esp-idf/components/esp_driver_ledc", "C:/esp/v6.0.2/esp-idf/components/esp_hal_ana_conv", "C:/esp/v6.0.2/esp-idf/components/esp_hal_clock", "C:/esp/v6.0.2/esp-idf/components/esp_hal_dma", "C:/esp/v6.0.2/esp-idf/components/esp_hal_gpio", "C:/esp/v6.0.2/esp-idf/components/esp_hal_gpspi", "C:/esp/v6.0.2/esp-idf/components/esp_hal_i2s", "C:/esp/v6.0.2/esp-idf/components/esp_hal_ledc", "C:/esp/v6.0.2/esp-idf/components/esp_hal_mspi", "C:/esp/v6.0.2/esp-idf/components/esp_hal_pmu", "C:/esp/v6.0.2/esp-idf/components/esp_hal_rtc_timer", "C:/esp/v6.0.2/esp-idf/components/esp_hal_security", "C:/esp/v6.0.2/esp-idf/components/esp_hal_timg", "C:/esp/v6.0.2/esp-idf/components/esp_hal_touch_sens", "C:/esp/v6.0.2/esp-idf/components/esp_hal_uart", "C:/esp/v6.0.2/esp-idf/components/esp_hal_usb", "C:/esp/v6.0.2/esp-idf/components/esp_hal_wdt", "C:/esp/v6.0.2/esp-idf/components/esp_hw_support", "C:/esp/v6.0.2/esp-idf/components/esp_libc", "C:/esp/v6.0.2/esp-idf/components/esp_mm", "C:/esp/v6.0.2/esp-idf/components/esp_partition", "C:/esp/v6.0.2/esp-idf/components/esp_pm", "C:/esp/v6.0.2/esp-idf/components/esp_rom", "C:/esp/v6.0.2/esp-idf/components/esp_security", "C:/esp/v6.0.2/esp-idf/components/esp_stdio", "C:/esp/v6.0.2/esp-idf/components/esp_system", "C:/esp/v6.0.2/esp-idf/components/esp_timer", "C:/esp/v6.0.2/esp-idf/components/esp_usb_cdc_rom_console", "C:/esp/v6.0.2/esp-idf/components/esptool_py", "C:/esp/v6.0.2/esp-idf/components/freertos", "C:/esp/v6.0.2/esp-idf/components/hal", "C:/esp/v6.0.2/esp-idf/components/heap", "C:/esp/v6.0.2/esp-idf/components/log", "C:/Users/Administrator/Desktop/esp32/red_con/main", "C:/esp/v6.0.2/esp-idf/components/mbedtls", "C:/esp/v6.0.2/esp-idf/components/partition_table", "C:/esp/v6.0.2/esp-idf/components/pthread", "C:/esp/v6.0.2/esp-idf/components/soc", "C:/esp/v6.0.2/esp-idf/components/spi_flash", "C:/esp/v6.0.2/esp-idf/components/xtensa", "" ],
     "build_component_info" : {
         "app_update": {
             "alias": "idf::app_update",
@@ -193,6 +193,21 @@
             "sources": [ "C:/esp/v6.0.2/esp-idf/components/esp_driver_gpio/src/gpio.c", "C:/esp/v6.0.2/esp-idf/components/esp_driver_gpio/src/gpio_glitch_filter_ops.c", "C:/esp/v6.0.2/esp-idf/components/esp_driver_gpio/src/rtc_io.c", "C:/esp/v6.0.2/esp-idf/components/esp_driver_gpio/src/dedic_gpio.c", "C:/esp/v6.0.2/esp-idf/components/esp_driver_gpio/src/gpio_pin_glitch_filter.c" ],
             "include_dirs": [ "include" ]
         },
+        "esp_driver_ledc": {
+            "alias": "idf::esp_driver_ledc",
+            "target": "___idf_esp_driver_ledc",
+            "prefix": "idf",
+            "dir": "C:/esp/v6.0.2/esp-idf/components/esp_driver_ledc",
+            "type": "LIBRARY",
+            "lib": "__idf_esp_driver_ledc",
+            "reqs": [ "esp_hal_ledc" ],
+            "priv_reqs": [ "esp_pm", "esp_driver_gpio" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "C:/Users/Administrator/Desktop/esp32/red_con/build/esp-idf/esp_driver_ledc/libesp_driver_ledc.a",
+            "sources": [ "C:/esp/v6.0.2/esp-idf/components/esp_driver_ledc/src/ledc.c" ],
+            "include_dirs": [ "include" ]
+        },
         "esp_hal_ana_conv": {
             "alias": "idf::esp_hal_ana_conv",
             "target": "___idf_esp_hal_ana_conv",
@@ -281,6 +296,21 @@
             "managed_priv_reqs": [],
             "file": "C:/Users/Administrator/Desktop/esp32/red_con/build/esp-idf/esp_hal_i2s/libesp_hal_i2s.a",
             "sources": [ "C:/esp/v6.0.2/esp-idf/components/esp_hal_i2s/i2s_hal.c", "C:/esp/v6.0.2/esp-idf/components/esp_hal_i2s/esp32s3/i2s_periph.c" ],
+            "include_dirs": [ "include", "esp32s3/include" ]
+        },
+        "esp_hal_ledc": {
+            "alias": "idf::esp_hal_ledc",
+            "target": "___idf_esp_hal_ledc",
+            "prefix": "idf",
+            "dir": "C:/esp/v6.0.2/esp-idf/components/esp_hal_ledc",
+            "type": "LIBRARY",
+            "lib": "__idf_esp_hal_ledc",
+            "reqs": [ "soc", "hal" ],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "C:/Users/Administrator/Desktop/esp32/red_con/build/esp-idf/esp_hal_ledc/libesp_hal_ledc.a",
+            "sources": [ "C:/esp/v6.0.2/esp-idf/components/esp_hal_ledc/ledc_hal.c", "C:/esp/v6.0.2/esp-idf/components/esp_hal_ledc/ledc_hal_iram.c", "C:/esp/v6.0.2/esp-idf/components/esp_hal_ledc/esp32s3/ledc_periph.c" ],
             "include_dirs": [ "include", "esp32s3/include" ]
         },
         "esp_hal_mspi": {
@@ -666,11 +696,11 @@
             "type": "LIBRARY",
             "lib": "__idf_main",
             "reqs": [],
-            "priv_reqs": [ "spi_flash", "esp_driver_gpio" ],
+            "priv_reqs": [ "spi_flash", "esp_driver_gpio", "esp_driver_ledc" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "C:/Users/Administrator/Desktop/esp32/red_con/build/esp-idf/main/libmain.a",
-            "sources": [ "C:/Users/Administrator/Desktop/esp32/red_con/main/led_control.c" ],
+            "sources": [ "C:/Users/Administrator/Desktop/esp32/red_con/main/led_control_power.c" ],
             "include_dirs": []
         },
         "mbedtls": {
@@ -2580,7 +2610,7 @@
             "source": "project_components",
             "lib": "__idf_main",
             "reqs": [],
-            "priv_reqs": [ "spi_flash", "esp_driver_gpio" ],
+            "priv_reqs": [ "spi_flash", "esp_driver_gpio", "esp_driver_ledc" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "include_dirs": []

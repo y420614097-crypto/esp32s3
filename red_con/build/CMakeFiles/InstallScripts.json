@@ -73,6 +73,8 @@
 		"C:/Users/Administrator/Desktop/esp32/red_con/build/esp-idf/esp_libc/src/port/cmake_install.cmake",
 		"C:/Users/Administrator/Desktop/esp32/red_con/build/esp-idf/pthread/cmake_install.cmake",
 		"C:/Users/Administrator/Desktop/esp32/red_con/build/esp-idf/cxx/cmake_install.cmake",
+		"C:/Users/Administrator/Desktop/esp32/red_con/build/esp-idf/esp_hal_ledc/cmake_install.cmake",
+		"C:/Users/Administrator/Desktop/esp32/red_con/build/esp-idf/esp_driver_ledc/cmake_install.cmake",
 		"C:/Users/Administrator/Desktop/esp32/red_con/build/esp-idf/main/cmake_install.cmake"
 	],
 	"Parallel" : false
