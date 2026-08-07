@@ -1,0 +1,2 @@
+source C:/Users/Administrator/Desktop/esp32/ad8232/build/bootloader/gdbinit/symbols
+source C:/Users/Administrator/Desktop/esp32/ad8232/build/bootloader/gdbinit/connect
