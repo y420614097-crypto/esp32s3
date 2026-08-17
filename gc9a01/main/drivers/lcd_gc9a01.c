@@ -1,0 +1,70 @@
+#include "lcd_gc9a01.h"
+#include "esp_lcd_panel_io.h"
+#include "esp_lcd_panel_ops.h"
+#include "esp_lcd_gc9a01.h"
+#include "driver/spi_master.h"
+#include "driver/gpio.h"
+
+// --- 硬件引脚配置 (只在这个文件里修改) ---
+#define PIN_NUM_MOSI    13
+#define PIN_NUM_CLK     14
+#define PIN_NUM_CS      15
+#define PIN_NUM_DC      2
+#define PIN_NUM_RST     4
+#define PIN_NUM_BK_LIGHT 5 // 背光引脚
+
+static const char *TAG = "lcd_gc9a01";
+
+esp_lcd_panel_handle_t lcd_gc9a01_init(void) {
+    esp_lcd_panel_handle_t panel_handle = NULL;
+
+    // 1. 初始化背光 (可选)
+    gpio_config_t bk_gpio_config = {
+        .mode = GPIO_MODE_OUTPUT,
+        .pin_bit_mask = 1ULL << PIN_NUM_BK_LIGHT
+    };
+    ESP_ERROR_CHECK(gpio_config(&bk_gpio_config));
+    gpio_set_level(PIN_NUM_BK_LIGHT, 1); // 点亮背光
+
+    // 2. 配置 SPI 总线
+    spi_bus_config_t buscfg = {
+        .sclk_io_num = PIN_NUM_CLK,
+        .mosi_io_num = PIN_NUM_MOSI,
+        .miso_io_num = -1, // GC9A01 通常不需要 MISO
+        .quadwp_io_num = -1,
+        .quadhd_io_num = -1,
+        .max_transfer_sz = LCD_WIDTH * LCD_HEIGHT * sizeof(uint16_t)
+    };
+    ESP_ERROR_CHECK(spi_bus_initialize(SPI2_HOST, &buscfg, SPI_DMA_CH_AUTO));
+
+    // 3. 配置 LCD IO 句柄
+    esp_lcd_panel_io_handle_t io_handle = NULL;
+    esp_lcd_panel_io_spi_config_t io_config = {
+        .dc_gpio_num = PIN_NUM_DC,
+        .cs_gpio_num = PIN_NUM_CS,
+        .pclk_hz = 40 * 1000 * 1000, // 40MHz 时钟
+        .lcd_cmd_bits = 8,
+        .lcd_param_bits = 8,
+        .spi_mode = 0,
+        .trans_queue_depth = 10,
+    };
+    ESP_ERROR_CHECK(esp_lcd_new_panel_io_spi((esp_lcd_spi_bus_handle_t)SPI2_HOST, &io_config, &io_handle));
+
+    // 4. 安装 GC9A01 驱动
+    esp_lcd_panel_dev_config_t panel_config = {
+        .reset_gpio_num = PIN_NUM_RST,
+        .rgb_ele_order = LCD_RGB_ELEMENT_ORDER_RGB,
+        .bits_per_pixel = 16,
+    };
+    ESP_ERROR_CHECK(esp_lcd_new_panel_gc9a01(io_handle, &panel_config, &panel_handle));
+
+    // 5. 执行标准初始化流程
+    esp_lcd_panel_reset(panel_handle);
+    esp_lcd_panel_init(panel_handle);
+    esp_lcd_panel_invert_color(panel_handle, true); // GC9A01 通常需要反色
+    esp_lcd_panel_mirror(panel_handle, true, false); // 根据实际安装方向调整镜像
+    esp_lcd_panel_disp_on_off(panel_handle, true);
+
+    ESP_LOGI(TAG, "GC9A01 Init OK");
+    return panel_handle;
+}
