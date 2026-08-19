@@ -4,13 +4,17 @@
 #include "esp_lcd_gc9a01.h"
 #include "driver/spi_master.h"
 #include "driver/gpio.h"
+#include "esp_log.h"  // <--- 加上这一行
 
 // --- 硬件引脚配置 (只在这个文件里修改) ---
-#define PIN_NUM_MOSI    13
-#define PIN_NUM_CLK     14
-#define PIN_NUM_CS      15
-#define PIN_NUM_DC      2
-#define PIN_NUM_RST     4
+#define PIN_NUM_RST     9
+#define PIN_NUM_CS      46
+#define PIN_NUM_DC      3
+#define PIN_NUM_MOSI    8
+#define PIN_NUM_CLK     18
+
+
+
 #define PIN_NUM_BK_LIGHT 5 // 背光引脚
 
 static const char *TAG = "lcd_gc9a01";

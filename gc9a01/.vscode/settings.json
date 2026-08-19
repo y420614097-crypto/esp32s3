@@ -12,6 +12,6 @@
   "clangd.arguments": [
     "--background-index",
     "--query-driver=**",
-    "--compile-commands-dir=c:\\Users\\Administrator\\Desktop\\esp32\\red_con\\build"
+    "--compile-commands-dir=c:\\Users\\Administrator\\Desktop\\esp32\\gc9a01\\build"
   ]
 }

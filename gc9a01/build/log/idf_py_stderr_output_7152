@@ -1,0 +1,18 @@
+Command: cmake -G Ninja -B C:\Users\Administrator\Desktop\esp32\gc9a01\build -DPYTHON_DEPS_CHECKED=1 -DPYTHON=C:\Users\Administrator\.espressif\python_env\idf6.0_py3.14_env\Scripts\python.exe -DESP_PLATFORM=1 -DCCACHE_ENABLE=True C:\Users\Administrator\Desktop\esp32\gc9a01
+Default value for LV_MEM_SIZE_KILOBYTES in sdkconfig is 2 but it is 64 according to Kconfig.
+Using default value from sdkconfig (2).
+Default value for LV_COLOR_MIX_ROUND_OFS in sdkconfig is 0 but it is 128 according to Kconfig.
+Using default value from sdkconfig (0).
+Default value for LV_TXT_BREAK_CHARS in sdkconfig is " ,.;:-_)]}" but it is " ,.;:-_)}" according to Kconfig.
+Using default value from sdkconfig (" ,.;:-_)]}").
+Default value for LV_USE_THEME_MONO in sdkconfig is y but it is n according to Kconfig.
+Using default value from sdkconfig (y).
+NOTE: Kconfig parser version: 1
+NOTE: Kconfig defaults policy: use sdkconfig
+NOTE: Status: Finished with notifications
+NOTE: C:/Users/Administrator/Desktop/esp32/gc9a01/components/lvgl/Kconfig:637: LV_COLOR_MIX_ROUND_OFS: Kconfig default value: 128, sdkconfig default value: 0
+NOTE: C:/Users/Administrator/Desktop/esp32/gc9a01/components/lvgl/Kconfig:1145: LV_USE_THEME_MONO: Kconfig default value: n, sdkconfig default value: y
+NOTE: C:/Users/Administrator/Desktop/esp32/gc9a01/components/lvgl/Kconfig:95: LV_MEM_SIZE_KILOBYTES: Kconfig default value: 64, sdkconfig default value: 2
+NOTE: C:/Users/Administrator/Desktop/esp32/gc9a01/components/lvgl/Kconfig:930: LV_TXT_BREAK_CHARS: Kconfig default value:  ,.;:-_)}, sdkconfig default value:  ,.;:-_)]}
+HINT: This area reports issues with default values of the config options.
+For more information, please visit https://docs.espressif.com/projects/esp-idf-kconfig/en/latest/kconfiglib/configuration-report.html#default-value-mismatch

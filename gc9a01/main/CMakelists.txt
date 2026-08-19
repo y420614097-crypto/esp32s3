@@ -1,9 +1,9 @@
 idf_component_register(
-    SRCS "gc_mian.c" 
+    SRCS "gc_main.c" 
          "drivers/lcd_gc9a01.c" 
          "app/lcd_display.c"
     
     INCLUDE_DIRS "." "drivers" "app"
 
-    PRIV_REQUIRES spi_flash esp_driver_gpio esp_lcd nvs_flash esp_netif esp_event esp_wifi
+    PRIV_REQUIRES spi_flash esp_driver_gpio esp_lcd nvs_flash esp_netif esp_event esp_wifi lvgl
 )

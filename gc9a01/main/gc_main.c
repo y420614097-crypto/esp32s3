@@ -1,38 +1,41 @@
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
-#include "app/lcd_display.h" // 引入你自己的头文件
+#include "esp_task_wdt.h" 
+#include "esp_log.h"      // 【新增】必须包含这个才能使用 ESP_LOGI
+#include "app/lcd_display.h" 
 #include "drivers/lcd_gc9a01.h"
+#include "lvgl.h" 
 
-// --- 任务1的入口函数 ---
-void task_color_test(void *pvParameters) {
-    esp_lcd_panel_handle_t panel = (esp_lcd_panel_handle_t)pvParameters;
-    lcd_run_color_test(panel); // 调用你在 lcd_display.c 里写的函数
-}
+// 【新增】定义 TAG，否则编译器不知道 TAG 是什么
+static const char *TAG = "MAIN_TASK"; 
 
-// --- 任务2的入口函数 (比如你想同时让屏幕显示文字) ---
+// --- LVGL 显示任务 ---
 void task_text_display(void *pvParameters) {
     esp_lcd_panel_handle_t panel = (esp_lcd_panel_handle_t)pvParameters;
-        lcd_welcome_text(panel);
-}
-// --- 任务3的入口函数 (比如你想同时让屏幕显示文字) ---
-void task_text1_display(void *pvParameters) {
-    esp_lcd_panel_handle_t panel = (esp_lcd_panel_handle_t)pvParameters;
-        lcd_welcome_text1(panel);
+    (void)panel; // 避免未使用变量警告
+    ESP_LOGI(TAG, "显示任务已启动，进入刷新循环");
+    while (1) {
+        lv_timer_handler();
+        vTaskDelay(pdMS_TO_TICKS(5));
+    }
 }
 
 void app_main(void) {
-    // 1. 初始化硬件
     esp_lcd_panel_handle_t panel = lcd_gc9a01_init();
+    ESP_LOGI(TAG, "在 app_main 中初始化 LVGL，临时增加 WDT 超时至 10s");
+    // 临时把 Task WDT 超时时间调大，防止 lv_init 在某些设备上较慢触发看门狗
+    esp_task_wdt_config_t wdt_cfg = {
+        .timeout_ms = 10000,
+        .idle_core_mask = 0,
+        .trigger_panic = false,
+    };
+    esp_err_t wrc = esp_task_wdt_reconfigure(&wdt_cfg);
+    if (wrc != ESP_OK) {
+        ESP_LOGW(TAG, "esp_task_wdt_init returned %d", wrc);
+    }
+    lcd_lvgl_init(panel);
+    lcd_welcome_text1(panel);
 
-    // 2. 创建任务 A (颜色测试)
-    xTaskCreate(task_color_test, "ColorTask", 4096, (void*)panel, 5, NULL);
-
-    // 3. 创建任务 B (显示)
-    xTaskCreate(task_text_display, "TextTask", 4096, (void*)panel, 5, NULL);
-
-    // 3. 创建任务 c (其他逻辑)
-    xTaskCreate(task_text1_display, "TextTask1", 4096, (void*)panel, 5, NULL);
-
-    // app_main 到这里就结束了，但两个任务会在后台一直跑！
+    xTaskCreate(task_text_display, "TextTask", 8192, (void *)panel, 5, NULL);
 }

@@ -1,2 +1,2 @@
-source D:/esp32s3/test/build/gdbinit/symbols
-source D:/esp32s3/test/build/gdbinit/connect
+source C:/Users/Administrator/Desktop/esp32/gc9a01/build/gdbinit/symbols
+source C:/Users/Administrator/Desktop/esp32/gc9a01/build/gdbinit/connect
