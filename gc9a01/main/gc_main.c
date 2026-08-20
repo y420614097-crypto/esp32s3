@@ -5,6 +5,7 @@
 #include "esp_log.h"      // 【新增】必须包含这个才能使用 ESP_LOGI
 #include "app/lcd_display.h" 
 #include "drivers/lcd_gc9a01.h"
+#include "app/wifi_manager.h" 
 #include "lvgl.h" 
 
 // 【新增】定义 TAG，否则编译器不知道 TAG 是什么
@@ -22,6 +23,9 @@ void task_text_display(void *pvParameters) {
 }
 
 void app_main(void) {
+    //wifi组件启动
+    wifi_manager_init()
+    
     esp_lcd_panel_handle_t panel = lcd_gc9a01_init();
     ESP_LOGI(TAG, "在 app_main 中初始化 LVGL，临时增加 WDT 超时至 10s");
     // 临时把 Task WDT 超时时间调大，防止 lv_init 在某些设备上较慢触发看门狗
