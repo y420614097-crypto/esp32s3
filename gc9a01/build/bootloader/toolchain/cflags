@@ -1,4 +1,4 @@
-"-specs=C:/Users/Administrator/Desktop/esp32/gc9a01/build/bootloader/specs/picolibc.specs"
+"-specs=D:/esp32s3_new/gc9a01/build/bootloader/specs/picolibc.specs"
 -mlongcalls
 -fno-builtin-memcpy
 -fno-builtin-memset

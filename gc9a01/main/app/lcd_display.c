@@ -5,12 +5,19 @@
 #include "lvgl.h"
 
 static const char *TAG = "LCD_DISPLAY";
+// 全局变量
+static lv_obj_t *g_time_label = NULL;
+
+// 更新时间的接口
+void lcd_update_time(const char *time_str) {
+    if (g_time_label != NULL) {
+        lv_label_set_text(g_time_label, time_str);
+    }
+}
 
 // ================= LVGL v9 刷新回调函数 =================
 static void lvgl_flush_cb(lv_display_t *disp, const lv_area_t *area, uint8_t *px_map)
 {
-    // 打开下面的日志以确认 LVGL 的 flush 回调是否被触发
-    ESP_LOGI(TAG, "Flush: x1:%d y1:%d x2:%d y2:%d", area->x1, area->y1, area->x2, area->y2);
 
     esp_lcd_panel_handle_t panel = (esp_lcd_panel_handle_t)lv_display_get_user_data(disp);
     
@@ -64,6 +71,12 @@ void lcd_welcome_text(esp_lcd_panel_handle_t panel)
     lv_obj_align(label, LV_ALIGN_CENTER, 0, 0);
     lv_obj_set_style_text_color(label, lv_color_hex(0x00FF00), 0);
     lv_obj_set_style_text_font(label, &lv_font_montserrat_14, 0); 
+
+    // 创建时间标签
+    g_time_label = lv_label_create(scr);
+    lv_label_set_text(g_time_label, "Syncing Time...");
+    lv_obj_align(g_time_label, LV_ALIGN_CENTER, 0, 30); // 放在下方
+    lv_obj_set_style_text_color(g_time_label, lv_color_hex(0x00FF00), 0);
 }
 
 void lcd_welcome_text1(esp_lcd_panel_handle_t panel)

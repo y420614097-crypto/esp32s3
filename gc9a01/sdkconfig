@@ -968,20 +968,15 @@ CONFIG_ESPTOOLPY_MONITOR_BAUD=115200
 #
 # Partition Table
 #
-# default:
-CONFIG_PARTITION_TABLE_SINGLE_APP=y
-# default:
-# CONFIG_PARTITION_TABLE_SINGLE_APP_LARGE is not set
-# default:
+# CONFIG_PARTITION_TABLE_SINGLE_APP is not set
+CONFIG_PARTITION_TABLE_SINGLE_APP_LARGE=y
 # CONFIG_PARTITION_TABLE_TWO_OTA is not set
-# default:
 # CONFIG_PARTITION_TABLE_TWO_OTA_LARGE is not set
-# default:
 # CONFIG_PARTITION_TABLE_CUSTOM is not set
 # default:
 CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
 # default:
-CONFIG_PARTITION_TABLE_FILENAME="partitions_singleapp.csv"
+CONFIG_PARTITION_TABLE_FILENAME="partitions_singleapp_large.csv"
 # default:
 CONFIG_PARTITION_TABLE_OFFSET=0x8000
 # default:
@@ -3026,6 +3021,23 @@ CONFIG_VFS_INITIALIZE_DEV_NULL=y
 # end of Virtual file system
 
 #
+# CMake Utilities
+#
+# default:
+# CONFIG_CU_RELINKER_ENABLE is not set
+# default:
+# CONFIG_CU_DIAGNOSTICS_COLOR_NEVER is not set
+# default:
+CONFIG_CU_DIAGNOSTICS_COLOR_ALWAYS=y
+# default:
+# CONFIG_CU_DIAGNOSTICS_COLOR_AUTO is not set
+# default:
+# CONFIG_CU_GCC_LTO_ENABLE is not set
+# default:
+# CONFIG_CU_GCC_STRING_1BYTE_ALIGN is not set
+# end of CMake Utilities
+
+#
 # LVGL configuration
 #
 # default:
@@ -3076,7 +3088,7 @@ CONFIG_LV_USE_BUILTIN_SPRINTF=y
 # default:
 # CONFIG_LV_USE_CUSTOM_SPRINTF is not set
 # default:
-CONFIG_LV_MEM_SIZE_KILOBYTES=2
+CONFIG_LV_MEM_SIZE_KILOBYTES=64
 # default:
 CONFIG_LV_MEM_POOL_EXPAND_SIZE_KILOBYTES=0
 # default:
@@ -3110,9 +3122,9 @@ CONFIG_LV_OS_NONE=y
 # default:
 # CONFIG_LV_OS_MQX is not set
 # default:
-# CONFIG_LV_OS_CUSTOM is not set
+# CONFIG_LV_OS_SDL2 is not set
 # default:
-CONFIG_LV_USE_OS=0
+# CONFIG_LV_OS_CUSTOM is not set
 # end of Operating System (OS)
 
 #
@@ -3125,9 +3137,13 @@ CONFIG_LV_DRAW_BUF_ALIGN=4
 # default:
 CONFIG_LV_DRAW_LAYER_SIMPLE_BUF_SIZE=24576
 # default:
+CONFIG_LV_DRAW_LAYER_MAX_MEMORY=0
+# default:
 CONFIG_LV_USE_DRAW_SW=y
 # default:
 CONFIG_LV_DRAW_SW_SUPPORT_RGB565=y
+# default:
+CONFIG_LV_DRAW_SW_SUPPORT_RGB565_SWAPPED=y
 # default:
 CONFIG_LV_DRAW_SW_SUPPORT_RGB565A8=y
 # default:
@@ -3137,6 +3153,8 @@ CONFIG_LV_DRAW_SW_SUPPORT_XRGB8888=y
 # default:
 CONFIG_LV_DRAW_SW_SUPPORT_ARGB8888=y
 # default:
+CONFIG_LV_DRAW_SW_SUPPORT_ARGB8888_PREMULTIPLIED=y
+# default:
 CONFIG_LV_DRAW_SW_SUPPORT_L8=y
 # default:
 CONFIG_LV_DRAW_SW_SUPPORT_AL88=y
@@ -3144,6 +3162,8 @@ CONFIG_LV_DRAW_SW_SUPPORT_AL88=y
 CONFIG_LV_DRAW_SW_SUPPORT_A8=y
 # default:
 CONFIG_LV_DRAW_SW_SUPPORT_I1=y
+# default:
+CONFIG_LV_DRAW_SW_I1_LUM_THRESHOLD=127
 # default:
 CONFIG_LV_DRAW_SW_DRAW_UNIT_CNT=1
 # default:
@@ -3165,13 +3185,15 @@ CONFIG_LV_DRAW_SW_ASM_NONE=y
 # default:
 # CONFIG_LV_DRAW_SW_ASM_HELIUM is not set
 # default:
+# CONFIG_LV_DRAW_SW_ASM_RISCV_V is not set
+# default:
 # CONFIG_LV_DRAW_SW_ASM_CUSTOM is not set
 # default:
 CONFIG_LV_USE_DRAW_SW_ASM=0
 # default:
-# CONFIG_LV_USE_DRAW_VGLITE is not set
-# default:
 # CONFIG_LV_USE_PXP is not set
+# default:
+# CONFIG_LV_USE_G2D is not set
 # default:
 # CONFIG_LV_USE_DRAW_DAVE2D is not set
 # default:
@@ -3180,6 +3202,12 @@ CONFIG_LV_USE_DRAW_SW_ASM=0
 # CONFIG_LV_USE_DRAW_VG_LITE is not set
 # default:
 # CONFIG_LV_USE_VECTOR_GRAPHIC is not set
+# default:
+# CONFIG_LV_USE_DRAW_DMA2D is not set
+# default:
+# CONFIG_LV_USE_PPA is not set
+# default:
+# CONFIG_LV_USE_DRAW_EVE is not set
 # end of Rendering Configuration
 
 #
@@ -3206,7 +3234,7 @@ CONFIG_LV_USE_ASSERT_MALLOC=y
 # CONFIG_LV_USE_ASSERT_MEM_INTEGRITY is not set
 # default:
 # CONFIG_LV_USE_ASSERT_OBJ is not set
-CONFIG_LV_ASSERT_HANDLER_INCLUDE=""
+CONFIG_LV_ASSERT_HANDLER_INCLUDE="esp_log.h"
 # end of Asserts
 
 #
@@ -3232,13 +3260,17 @@ CONFIG_LV_IMAGE_HEADER_CACHE_DEF_CNT=0
 # default:
 CONFIG_LV_GRADIENT_MAX_STOPS=2
 # default:
-CONFIG_LV_COLOR_MIX_ROUND_OFS=0
+CONFIG_LV_COLOR_MIX_ROUND_OFS=128
 # default:
 # CONFIG_LV_OBJ_STYLE_CACHE is not set
 # default:
 # CONFIG_LV_USE_OBJ_ID is not set
 # default:
+# CONFIG_LV_USE_OBJ_NAME is not set
+# default:
 # CONFIG_LV_USE_OBJ_PROPERTY is not set
+# default:
+# CONFIG_LV_USE_EXT_DATA is not set
 # end of Others
 # end of Feature Configuration
 
@@ -3313,9 +3345,9 @@ CONFIG_LV_FONT_MONTSERRAT_14=y
 # default:
 # CONFIG_LV_FONT_DEJAVU_16_PERSIAN_HEBREW is not set
 # default:
-# CONFIG_LV_FONT_SIMSUN_14_CJK is not set
+# CONFIG_LV_FONT_SOURCE_HAN_SANS_SC_14_CJK is not set
 # default:
-# CONFIG_LV_FONT_SIMSUN_16_CJK is not set
+# CONFIG_LV_FONT_SOURCE_HAN_SANS_SC_16_CJK is not set
 # default:
 # CONFIG_LV_FONT_UNSCII_8 is not set
 # default:
@@ -3369,9 +3401,9 @@ CONFIG_LV_FONT_DEFAULT_MONTSERRAT_14=y
 # default:
 # CONFIG_LV_FONT_DEFAULT_DEJAVU_16_PERSIAN_HEBREW is not set
 # default:
-# CONFIG_LV_FONT_DEFAULT_SIMSUN_14_CJK is not set
+# CONFIG_LV_FONT_DEFAULT_SOURCE_HAN_SANS_SC_14_CJK is not set
 # default:
-# CONFIG_LV_FONT_DEFAULT_SIMSUN_16_CJK is not set
+# CONFIG_LV_FONT_DEFAULT_SOURCE_HAN_SANS_SC_16_CJK is not set
 # default:
 # CONFIG_LV_FONT_DEFAULT_UNSCII_8 is not set
 # default:
@@ -3382,6 +3414,11 @@ CONFIG_LV_FONT_DEFAULT_MONTSERRAT_14=y
 # CONFIG_LV_USE_FONT_COMPRESSED is not set
 # default:
 CONFIG_LV_USE_FONT_PLACEHOLDER=y
+
+#
+# Enable static fonts
+#
+# end of Enable static fonts
 # end of Font Usage
 
 #
@@ -3392,9 +3429,11 @@ CONFIG_LV_TXT_ENC_UTF8=y
 # default:
 # CONFIG_LV_TXT_ENC_ASCII is not set
 # default:
-CONFIG_LV_TXT_BREAK_CHARS=" ,.;:-_)]}"
+CONFIG_LV_TXT_BREAK_CHARS=" ,.;:-_)}"
 # default:
 CONFIG_LV_TXT_LINE_BREAK_LONG_LEN=0
+# default:
+CONFIG_LV_TXT_COLOR_CMD="#"
 # default:
 # CONFIG_LV_USE_BIDI is not set
 # default:
@@ -3411,6 +3450,8 @@ CONFIG_LV_USE_ANIMIMG=y
 # default:
 CONFIG_LV_USE_ARC=y
 # default:
+CONFIG_LV_USE_ARCLABEL=y
+# default:
 CONFIG_LV_USE_BAR=y
 # default:
 CONFIG_LV_USE_BUTTON=y
@@ -3420,6 +3461,26 @@ CONFIG_LV_USE_BUTTONMATRIX=y
 CONFIG_LV_USE_CALENDAR=y
 # default:
 # CONFIG_LV_CALENDAR_WEEK_STARTS_MONDAY is not set
+
+#
+# Days name configuration
+#
+# default:
+CONFIG_LV_MONDAY_STR="Mo"
+# default:
+CONFIG_LV_TUESDAY_STR="Tu"
+# default:
+CONFIG_LV_WEDNESDAY_STR="We"
+# default:
+CONFIG_LV_THURSDAY_STR="Th"
+# default:
+CONFIG_LV_FRIDAY_STR="Fr"
+# default:
+CONFIG_LV_SATURDAY_STR="Sa"
+# default:
+CONFIG_LV_SUNDAY_STR="Su"
+# end of Days name configuration
+
 # default:
 CONFIG_LV_USE_CALENDAR_HEADER_ARROW=y
 # default:
@@ -3502,7 +3563,7 @@ CONFIG_LV_THEME_DEFAULT_TRANSITION_TIME=80
 # default:
 CONFIG_LV_USE_THEME_SIMPLE=y
 # default:
-CONFIG_LV_USE_THEME_MONO=y
+# CONFIG_LV_USE_THEME_MONO is not set
 # end of Themes
 
 #
@@ -3518,7 +3579,7 @@ CONFIG_LV_USE_GRID=y
 # 3rd Party Libraries
 #
 # default:
-CONFIG_LV_FS_DEFAULT_DRIVE_LETTER=0
+CONFIG_LV_FS_DEFAULT_DRIVER_LETTER=0
 # default:
 # CONFIG_LV_USE_FS_STDIO is not set
 # default:
@@ -3536,6 +3597,10 @@ CONFIG_LV_FS_DEFAULT_DRIVE_LETTER=0
 # default:
 # CONFIG_LV_USE_FS_ARDUINO_SD is not set
 # default:
+# CONFIG_LV_USE_FS_UEFI is not set
+# default:
+# CONFIG_LV_USE_FS_FROGFS is not set
+# default:
 # CONFIG_LV_USE_LODEPNG is not set
 # default:
 # CONFIG_LV_USE_LIBPNG is not set
@@ -3545,6 +3610,8 @@ CONFIG_LV_FS_DEFAULT_DRIVE_LETTER=0
 # CONFIG_LV_USE_TJPGD is not set
 # default:
 # CONFIG_LV_USE_LIBJPEG_TURBO is not set
+# default:
+# CONFIG_LV_USE_LIBWEBP is not set
 # default:
 # CONFIG_LV_USE_GIF is not set
 # default:
@@ -3563,6 +3630,8 @@ CONFIG_LV_FS_DEFAULT_DRIVE_LETTER=0
 # CONFIG_LV_USE_RLOTTIE is not set
 # default:
 # CONFIG_LV_USE_THORVG is not set
+# default:
+# CONFIG_LV_USE_NANOVG is not set
 # default:
 # CONFIG_LV_USE_LZ4 is not set
 # default:
@@ -3593,11 +3662,19 @@ CONFIG_LV_USE_OBSERVER=y
 # default:
 # CONFIG_LV_USE_FILE_EXPLORER is not set
 # default:
+# CONFIG_LV_USE_FONT_MANAGER is not set
+# default:
+# CONFIG_LV_USE_TEST is not set
+# default:
+# CONFIG_LV_USE_TRANSLATION is not set
+# default:
+# CONFIG_LV_USE_COLOR_FILTER is not set
+# default:
 CONFIG_LVGL_VERSION_MAJOR=9
 # default:
-CONFIG_LVGL_VERSION_MINOR=2
+CONFIG_LVGL_VERSION_MINOR=5
 # default:
-CONFIG_LVGL_VERSION_PATCH=2
+CONFIG_LVGL_VERSION_PATCH=0
 # end of Others
 
 #
@@ -3618,6 +3695,8 @@ CONFIG_LVGL_VERSION_PATCH=2
 # default:
 # CONFIG_LV_USE_TFT_ESPI is not set
 # default:
+# CONFIG_LV_USE_LOVYAN_GFX is not set
+# default:
 # CONFIG_LV_USE_EVDEV is not set
 # default:
 # CONFIG_LV_USE_LIBINPUT is not set
@@ -3632,9 +3711,15 @@ CONFIG_LVGL_VERSION_PATCH=2
 # default:
 # CONFIG_LV_USE_GENERIC_MIPI is not set
 # default:
+# CONFIG_LV_USE_NXP_ELCDIF is not set
+# default:
 # CONFIG_LV_USE_RENESAS_GLCDC is not set
 # default:
-# CONFIG_LV_USE_OPENGLES is not set
+# CONFIG_LV_USE_ST_LTDC is not set
+# default:
+# CONFIG_LV_USE_FT81X is not set
+# default:
+# CONFIG_LV_USE_UEFI is not set
 # default:
 # CONFIG_LV_USE_QNX is not set
 # end of Devices
@@ -3650,13 +3735,15 @@ CONFIG_LV_BUILD_EXAMPLES=y
 # Demos
 #
 # default:
+CONFIG_LV_BUILD_DEMOS=y
+# default:
 # CONFIG_LV_USE_DEMO_WIDGETS is not set
 # default:
 # CONFIG_LV_USE_DEMO_KEYPAD_AND_ENCODER is not set
 # default:
-# CONFIG_LV_USE_DEMO_RENDER is not set
+# CONFIG_LV_USE_DEMO_BENCHMARK is not set
 # default:
-# CONFIG_LV_USE_DEMO_SCROLL is not set
+# CONFIG_LV_USE_DEMO_RENDER is not set
 # default:
 # CONFIG_LV_USE_DEMO_STRESS is not set
 # default:
@@ -3665,25 +3752,14 @@ CONFIG_LV_BUILD_EXAMPLES=y
 # CONFIG_LV_USE_DEMO_FLEX_LAYOUT is not set
 # default:
 # CONFIG_LV_USE_DEMO_MULTILANG is not set
+# default:
+# CONFIG_LV_USE_DEMO_SMARTWATCH is not set
+# default:
+# CONFIG_LV_USE_DEMO_EBIKE is not set
+# default:
+# CONFIG_LV_USE_DEMO_HIGH_RES is not set
 # end of Demos
 # end of LVGL configuration
-
-#
-# CMake Utilities
-#
-# default:
-# CONFIG_CU_RELINKER_ENABLE is not set
-# default:
-# CONFIG_CU_DIAGNOSTICS_COLOR_NEVER is not set
-# default:
-CONFIG_CU_DIAGNOSTICS_COLOR_ALWAYS=y
-# default:
-# CONFIG_CU_DIAGNOSTICS_COLOR_AUTO is not set
-# default:
-# CONFIG_CU_GCC_LTO_ENABLE is not set
-# default:
-# CONFIG_CU_GCC_STRING_1BYTE_ALIGN is not set
-# end of CMake Utilities
 # end of Component config
 
 # default:

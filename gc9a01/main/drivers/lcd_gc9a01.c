@@ -12,9 +12,6 @@
 #define PIN_NUM_DC      3
 #define PIN_NUM_MOSI    8
 #define PIN_NUM_CLK     18
-
-
-
 #define PIN_NUM_BK_LIGHT 5 // 背光引脚
 
 static const char *TAG = "lcd_gc9a01";

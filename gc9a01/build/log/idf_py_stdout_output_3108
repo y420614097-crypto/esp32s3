@@ -1,0 +1,423 @@
+Command: ninja all
+[0/1] Re-running CMake...
+-- Component directory C:/Users/86152/esp/v6.0.2/esp-idf/components/mqtt does not contain a CMakeLists.txt file. No component will be added
+-- Minimal build - ON
+-- ccache will be used for faster recompilation
+-- Building ESP-IDF components for target esp32s3
+NOTICE: Processing 4 dependencies:
+NOTICE: [1/4] espressif/cmake_utilities (0.5.3)
+NOTICE: [2/4] espressif/esp_lcd_gc9a01 (2.0.4)
+NOTICE: [3/4] lvgl/lvgl (9.5.0)
+NOTICE: [4/4] idf (6.0.2)
+-- ESP-TEE is currently supported only on the esp32c6;esp32h2;esp32c5;esp32c61 SoCs
+-- KCONFIG_REPORT_VERBOSITY not set, using default
+-- Project sdkconfig file D:/esp32s3_new/gc9a01/sdkconfig
+-- Compiler supported targets: xtensa-esp-elf
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- App "led_blink" version: 4928a95-dirty
+-- Setting up mbedtls configuration
+-- Linkage type is PUBLIC
+-- Adding linker script C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_wdt/esp32s3/rom.wdt.ld
+-- Adding linker script C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_system/ld/esp32s3/memory.ld.in
+--   -> Preprocessing .in script: C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_system/ld/esp32s3/memory.ld.in
+-- Adding linker script C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_system/ld/esp32s3/sections.ld.in
+--   -> Preprocessing .in script: C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_system/ld/esp32s3/sections.ld.in
+--   -> Applying ldgen processing: D:/esp32s3_new/gc9a01/build/esp-idf/esp_system/ld/sections.ld.in
+-- Adding linker script C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ld
+-- Adding linker script C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.api.ld
+-- Adding linker script C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.bt_funcs.ld
+-- Adding linker script C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.libgcc.ld
+-- Adding linker script C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.version.ld
+-- Adding linker script C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_master.ld
+-- Adding linker script C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_50.ld
+-- Adding linker script C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_smp.ld
+-- Adding linker script C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_dtm.ld
+-- Adding linker script C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_test.ld
+-- Adding linker script C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_scan.ld
+-- Adding linker script C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.libc.ld
+-- Adding linker script C:/Users/86152/esp/v6.0.2/esp-idf/components/soc/esp32s3/ld/esp32s3.peripherals.ld
+-- ESP_LCD_GC9A01: 2.0.4
+-- Components: app_update bootloader bootloader_support cxx driver efuse esp_app_format esp_blockdev esp_bootloader_format esp_coex esp_common esp_driver_bitscrambler esp_driver_dma esp_driver_gpio esp_driver_i2c esp_driver_i2s esp_driver_parlio esp_driver_spi esp_driver_uart esp_driver_usb_serial_jtag esp_event esp_hal_ana_conv esp_hal_clock esp_hal_dma esp_hal_gpio esp_hal_gpspi esp_hal_i2c esp_hal_i2s esp_hal_lcd esp_hal_mspi esp_hal_parlio esp_hal_pmu esp_hal_rtc_timer esp_hal_security esp_hal_timg esp_hal_touch_sens esp_hal_twai esp_hal_uart esp_hal_usb esp_hal_wdt esp_hw_support esp_lcd esp_libc esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_security esp_stdio esp_system esp_timer esp_usb_cdc_rom_console esp_wifi espressif__cmake_utilities espressif__esp_lcd_gc9a01 esptool_py freertos hal heap log lvgl__lvgl lwip main mbedtls nvs_flash nvs_sec_provider partition_table pthread soc spi_flash vfs wpa_supplicant xtensa
+-- Component paths: C:/Users/86152/esp/v6.0.2/esp-idf/components/app_update C:/Users/86152/esp/v6.0.2/esp-idf/components/bootloader C:/Users/86152/esp/v6.0.2/esp-idf/components/bootloader_support C:/Users/86152/esp/v6.0.2/esp-idf/components/cxx C:/Users/86152/esp/v6.0.2/esp-idf/components/driver C:/Users/86152/esp/v6.0.2/esp-idf/components/efuse C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_app_format C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_blockdev C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_bootloader_format C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_coex C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_common C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_driver_bitscrambler C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_driver_dma C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_driver_gpio C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_driver_i2c C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_driver_i2s C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_driver_parlio C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_driver_spi C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_driver_uart C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_driver_usb_serial_jtag C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_event C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_ana_conv C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_clock C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_dma C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_gpio C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_gpspi C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_i2c C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_i2s C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_lcd C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_mspi C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_parlio C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_pmu C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_rtc_timer C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_security C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_timg C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_touch_sens C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_twai C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_uart C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_usb C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_wdt C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hw_support C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_lcd C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_libc C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_mm C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif_stack C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_partition C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_phy C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_pm C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_psram C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_ringbuf C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_rom C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_security C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_stdio C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_system C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_timer C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_usb_cdc_rom_console C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_wifi D:/esp32s3_new/gc9a01/managed_components/espressif__cmake_utilities D:/esp32s3_new/gc9a01/managed_components/espressif__esp_lcd_gc9a01 C:/Users/86152/esp/v6.0.2/esp-idf/components/esptool_py C:/Users/86152/esp/v6.0.2/esp-idf/components/freertos C:/Users/86152/esp/v6.0.2/esp-idf/components/hal C:/Users/86152/esp/v6.0.2/esp-idf/components/heap C:/Users/86152/esp/v6.0.2/esp-idf/components/log D:/esp32s3_new/gc9a01/managed_components/lvgl__lvgl C:/Users/86152/esp/v6.0.2/esp-idf/components/lwip D:/esp32s3_new/gc9a01/main C:/Users/86152/esp/v6.0.2/esp-idf/components/mbedtls C:/Users/86152/esp/v6.0.2/esp-idf/components/nvs_flash C:/Users/86152/esp/v6.0.2/esp-idf/components/nvs_sec_provider C:/Users/86152/esp/v6.0.2/esp-idf/components/partition_table C:/Users/86152/esp/v6.0.2/esp-idf/components/pthread C:/Users/86152/esp/v6.0.2/esp-idf/components/soc C:/Users/86152/esp/v6.0.2/esp-idf/components/spi_flash C:/Users/86152/esp/v6.0.2/esp-idf/components/vfs C:/Users/86152/esp/v6.0.2/esp-idf/components/wpa_supplicant C:/Users/86152/esp/v6.0.2/esp-idf/components/xtensa
+-- Configuring done (35.6s)
+-- Generating done (2.0s)
+-- Build files have been written to: D:/esp32s3_new/gc9a01/build
+[1/11] Performing build step for 'bootloader'
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D D:\esp32s3_new\gc9a01\build\bootloader && C:\Users\86152\.espressif\python_env\idf6.0_py3.11_env\Scripts\python.exe C:/Users/86152/esp/v6.0.2/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 D:/esp32s3_new/gc9a01/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5240 bytes. 0x2dc0 bytes (36%) free.
+[2/11] No install step for 'bootloader'
+[3/11] Completed 'bootloader'
+[4/11] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app/time_sync.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/app/time_sync.c.obj 
+ccache C:\Users\86152\.espressif\tools\xtensa-esp-elf\esp-15.2.0_20251204\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe -DESP_PLATFORM -DIDF_VER=\"v6.0.2\" -DLV_CONF_INCLUDE_SIMPLE -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -ID:/esp32s3_new/gc9a01/build/config -ID:/esp32s3_new/gc9a01/main -ID:/esp32s3_new/gc9a01/main/drivers -ID:/esp32s3_new/gc9a01/main/app -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_libc/platform_include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/freertos/config/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/freertos/config/include/freertos -IC:/Users/86152/esp/v6.0.2/esp-idf/components/freertos/config/xtensa/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/freertos/FreeRTOS-Kernel/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -IC:/Users/86152/esp/v6.0.2/esp-idf/components/freertos/esp_additions/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hw_support/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hw_support/include/soc -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hw_support/ldo/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hw_support/debug_probe/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hw_support/etm/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hw_support/mspi_timing_tuning/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hw_support/power_supply/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hw_support/modem/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hw_support/include/soc/esp32s3 -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hw_support/port/esp32s3/. -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hw_support/port/esp32s3/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hw_support/mspi_timing_tuning/port/esp32s3/. -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hw_support/mspi_timing_tuning/port/esp32s3/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/heap/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/heap/tlsf -IC:/Users/86152/esp/v6.0.2/esp-idf/components/log/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/soc/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/soc/esp32s3 -IC:/Users/86152/esp/v6.0.2/esp-idf/components/soc/esp32s3/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/soc/esp32s3/register -IC:/Users/86152/esp/v6.0.2/esp-idf/components/hal/platform_port/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/hal/esp32s3/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/hal/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_rom/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_rom/esp32s3/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_rom/esp32s3/include/esp32s3 -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_rom/esp32s3 -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_common/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_system/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_system/port/soc -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_system/port/include/private -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_stdio/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/xtensa/esp32s3/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/xtensa/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/xtensa/deprecated_include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_gpio/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_gpio/esp32s3/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_usb/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_usb/esp32s3/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_pmu/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_pmu/esp32s3/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_ana_conv/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_ana_conv/esp32s3/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_dma/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_dma/esp32s3/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/lwip/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/lwip/include/apps -IC:/Users/86152/esp/v6.0.2/esp-idf/components/lwip/lwip/src/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/lwip/port/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/lwip/port/freertos/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/lwip/port/esp32xx/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/lwip/port/esp32xx/include/arch -IC:/Users/86152/esp/v6.0.2/esp-idf/components/lwip/port/esp32xx/include/sys -IC:/Users/86152/esp/v6.0.2/esp-idf/components/spi_flash/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_mspi/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_mspi/esp32s3/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_gpspi/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_gpspi/esp32s3/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_clock/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_clock/esp32s3/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_blockdev/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_driver_gpio/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_lcd/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_lcd/interface -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_lcd/rgb/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_driver_i2c/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_i2c/esp32s3/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_i2c/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_driver_spi/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_pm/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_driver_dma/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_driver_parlio/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_parlio/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_lcd/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_hal_lcd/esp32s3/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/nvs_flash/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_partition/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_event/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_wifi/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_wifi/include/local -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_wifi/wifi_apps/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_wifi/wifi_apps/nan_app/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_phy/include -IC:/Users/86152/esp/v6.0.2/esp-idf/components/esp_phy/esp32s3/include -ID:/esp32s3_new/gc9a01/managed_components/lvgl__lvgl -ID:/esp32s3_new/gc9a01/managed_components/lvgl__lvgl/src -ID:/esp32s3_new/gc9a01/managed_components -ID:/esp32s3_new/gc9a01/managed_components/lvgl__lvgl/examples -ID:/esp32s3_new/gc9a01/managed_components/lvgl__lvgl/demos -ID:/esp32s3_new/gc9a01/managed_components/espressif__esp_lcd_gc9a01/include @"D:/esp32s3_new/gc9a01/build/toolchain/cflags" -fdiagnostics-color=always -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=D:/esp32s3_new/gc9a01=. -fmacro-prefix-map=C:/Users/86152/esp/v6.0.2/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu23 -Wno-old-style-declaration -fzero-init-padding-bits=all -fno-malloc-dce -DESP_LCD_GC9A01_VER_MAJOR=2 -DESP_LCD_GC9A01_VER_MINOR=0 -DESP_LCD_GC9A01_VER_PATCH=4 -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/app/time_sync.c.obj -MF esp-idf\main\CMakeFiles\__idf_main.dir\app\time_sync.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/app/time_sync.c.obj -c D:/esp32s3_new/gc9a01/main/app/time_sync.c
+D:/esp32s3_new/gc9a01/main/app/time_sync.c: In function 'initialize_sntp':
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:5: error: unknown type name 'esp_netif_sntp_config_t'; did you mean 'esp_netif_config_t'?
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+      |     esp_netif_config_t
+In file included from D:/esp32s3_new/gc9a01/main/app/time_sync.c:4:
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:60:13: error: field name not in record or union initializer
+   60 |             .smooth_sync = false,                       \
+      |             ^
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:60:13: note: (near initialization for 'sntp_config')
+   60 |             .smooth_sync = false,                       \
+      |             ^
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:61:13: error: field name not in record or union initializer
+   61 |             .server_from_dhcp = false,                  \
+      |             ^
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:61:13: note: (near initialization for 'sntp_config')
+   61 |             .server_from_dhcp = false,                  \
+      |             ^
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:61:33: error: excess elements in scalar initializer [-Werror]
+   61 |             .server_from_dhcp = false,                  \
+      |                                 ^~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:61:33: note: (near initialization for 'sntp_config')
+   61 |             .server_from_dhcp = false,                  \
+      |                                 ^~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:62:13: error: field name not in record or union initializer
+   62 |             .wait_for_sync = true,                      \
+      |             ^
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:62:13: note: (near initialization for 'sntp_config')
+   62 |             .wait_for_sync = true,                      \
+      |             ^
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:62:30: error: excess elements in scalar initializer [-Werror]
+   62 |             .wait_for_sync = true,                      \
+      |                              ^~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:62:30: note: (near initialization for 'sntp_config')
+   62 |             .wait_for_sync = true,                      \
+      |                              ^~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:63:13: error: field name not in record or union initializer
+   63 |             .start = true,                              \
+      |             ^
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:63:13: note: (near initialization for 'sntp_config')
+   63 |             .start = true,                              \
+      |             ^
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:63:22: error: excess elements in scalar initializer [-Werror]
+   63 |             .start = true,                              \
+      |                      ^~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:63:22: note: (near initialization for 'sntp_config')
+   63 |             .start = true,                              \
+      |                      ^~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:64:13: error: field name not in record or union initializer
+   64 |             .sync_cb = NULL,                            \
+      |             ^
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:64:13: note: (near initialization for 'sntp_config')
+   64 |             .sync_cb = NULL,                            \
+      |             ^
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: error: excess elements in scalar initializer [-Werror]
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: (near initialization for 'sntp_config')
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:65:13: error: field name not in record or union initializer
+   65 |             .renew_servers_after_new_IP = false,        \
+      |             ^
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:65:13: note: (near initialization for 'sntp_config')
+   65 |             .renew_servers_after_new_IP = false,        \
+      |             ^
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:65:43: error: excess elements in scalar initializer [-Werror]
+   65 |             .renew_servers_after_new_IP = false,        \
+      |                                           ^~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:65:43: note: (near initialization for 'sntp_config')
+   65 |             .renew_servers_after_new_IP = false,        \
+      |                                           ^~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:66:13: error: field name not in record or union initializer
+   66 |             .ip_event_to_renew = IP_EVENT_STA_GOT_IP,   \
+      |             ^
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:66:13: note: (near initialization for 'sntp_config')
+   66 |             .ip_event_to_renew = IP_EVENT_STA_GOT_IP,   \
+      |             ^
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:66:34: error: excess elements in scalar initializer [-Werror]
+   66 |             .ip_event_to_renew = IP_EVENT_STA_GOT_IP,   \
+      |                                  ^~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:66:34: note: (near initialization for 'sntp_config')
+   66 |             .ip_event_to_renew = IP_EVENT_STA_GOT_IP,   \
+      |                                  ^~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:67:13: error: field name not in record or union initializer
+   67 |             .index_of_first_server = 0,                 \
+      |             ^
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:67:13: note: (near initialization for 'sntp_config')
+   67 |             .index_of_first_server = 0,                 \
+      |             ^
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:67:38: error: excess elements in scalar initializer [-Werror]
+   67 |             .index_of_first_server = 0,                 \
+      |                                      ^
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:67:38: note: (near initialization for 'sntp_config')
+   67 |             .index_of_first_server = 0,                 \
+      |                                      ^
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:68:13: error: field name not in record or union initializer
+   68 |             .num_of_servers = (servers_in_list),        \
+      |             ^
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:68:13: note: (near initialization for 'sntp_config')
+   68 |             .num_of_servers = (servers_in_list),        \
+      |             ^
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:68:31: error: excess elements in scalar initializer [-Werror]
+   68 |             .num_of_servers = (servers_in_list),        \
+      |                               ^
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:68:31: note: (near initialization for 'sntp_config')
+   68 |             .num_of_servers = (servers_in_list),        \
+      |                               ^
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:69:13: error: field name not in record or union initializer
+   69 |             .servers = list_of_servers,                 \
+      |             ^
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:69:13: note: (near initialization for 'sntp_config')
+   69 |             .servers = list_of_servers,                 \
+      |             ^
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:13: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:5: error: braces around scalar initializer [-Werror]
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:5: note: (near initialization for 'sntp_config')
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:73: error: initialization of 'int' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                                                         ^~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:69:24: note: in definition of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   69 |             .servers = list_of_servers,                 \
+      |                        ^~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:73: note: (near initialization for 'sntp_config')
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                                                         ^~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:69:24: note: in definition of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   69 |             .servers = list_of_servers,                 \
+      |                        ^~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:55: error: excess elements in scalar initializer [-Werror]
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |                                                       ^
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:69:24: note: in definition of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   69 |             .servers = list_of_servers,                 \
+      |                        ^~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:76:55: note: (near initialization for 'sntp_config')
+   76 |             ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(1, {server})
+      |                                                       ^
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:69:24: note: in definition of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE'
+   69 |             .servers = list_of_servers,                 \
+      |                        ^~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:24:43: note: in expansion of macro 'ESP_NETIF_SNTP_DEFAULT_CONFIG'
+   24 |     esp_netif_sntp_config_t sntp_config = ESP_NETIF_SNTP_DEFAULT_CONFIG("ntp.aliyun.com");
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/esp32s3_new/gc9a01/main/app/time_sync.c:31:25: error: passing argument 1 of 'esp_netif_sntp_init' from incompatible pointer type [-Wincompatible-pointer-types]
+   31 |     esp_netif_sntp_init(&sntp_config);
+      |                         ^~~~~~~~~~~~
+      |                         |
+      |                         int *
+C:/Users/86152/esp/v6.0.2/esp-idf/components/esp_netif/include/esp_netif_sntp.h:99:57: note: expected 'const esp_sntp_config_t *' {aka 'const struct esp_sntp_config *'} but argument is of type 'int *'
+   99 | esp_err_t esp_netif_sntp_init(const esp_sntp_config_t * config);
+      |                               ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+cc1.exe: all warnings being treated as errors
+ninja: build stopped: subcommand failed.

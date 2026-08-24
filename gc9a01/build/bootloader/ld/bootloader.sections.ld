@@ -1,12 +1,20 @@
 /*
+
  * SPDX-FileCopyrightText: 2026 Espressif Systems (Shanghai) CO LTD
+
  *
+
  * SPDX-License-Identifier: Apache-2.0
+
  */
 /*
+
  * SPDX-FileCopyrightText: 2026 Espressif Systems (Shanghai) CO LTD
+
  *
+
  * SPDX-License-Identifier: Apache-2.0
+
  */
 /*
 
@@ -136,24 +144,36 @@ SECTIONS
     *(.fini)
     *(.gnu.version)
     /** CPU will try to prefetch up to 16 bytes of
+
       * of instructions. This means that any configuration (e.g. MMU, PMS) must allow
+
       * safe access to up to 16 bytes after the last real instruction, add
+
       * dummy bytes to ensure this
+
       */
     . += 16;
     _text_end = ABSOLUTE(.);
     _etext = .;
   } > iram_seg
   /**
+
    * Discarding .rela.* sections results in the following mapping:
+
    * .rela.text.* -> .text.*
+
    * .rela.data.* -> .data.*
+
    * And so forth...
+
    */
   /DISCARD/ : { *(.rela.*) }
   /**
+
    * This section is not included in the binary image; it is only present in the ELF file.
+
    * It is used to keep certain symbols in the ELF file.
+
    */
   .noload 0 (INFO) :
   {
@@ -203,20 +223,31 @@ SECTIONS
   .debug_rnglists 0 : { *(.debug_rnglists) }
   .debug_str_offsets 0 : { *(.debug_str_offsets) }
   /**
+
    * Miscellaneous sections
+
    */
   .comment 0 : { *(.comment) }
   .note.GNU-stack 0 : { *(.note.GNU-stack) }
   .riscv.attributes 0 : { *(.riscv.attributes) }
 /**
+
  * .xt.prop and .xt.lit sections will be used by the debugger and disassembler
+
  * to get more information about raw data present in the code.
+
  * Indeed, it may be required to add some padding at some points in the code
+
  * in order to align a branch/jump destination on a particular bound.
+
  * Padding these instructions will generate null bytes that shall be
+
  * interpreted as data, and not code by the debugger or disassembler.
+
  * This section will only be present in the ELF file, not in the final binary
+
  * For more details, check GCC-212
+
  */
   .xtensa.info 0 : { *(.xtensa.info) }
   .xt.prop 0 : { *(.xt.prop .xt.prop.* .gnu.linkonce.prop.*) }

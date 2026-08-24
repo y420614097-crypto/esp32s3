@@ -16,24 +16,6 @@ static const char *TAG = "WIFI_MGR";
 
 static int s_retry_num = 0;
 
-// 定义一个事件组，用来通知其他任务“时间已经同步好了”
-EventGroupHandle_t wifi_event_group;
-const int WIFI_CONNECTED_BIT = BIT0;
-
-// NTP 时间同步函数
-static void obtain_time(void) {
-    ESP_LOGI(TAG, "正在从 NTP 服务器获取时间...");
-    
-    // 初始化 SNTP 服务，使用阿里云的 NTP 服务器（国内速度快）
-    esp_sntp_setoperatingmode(SNTP_OPMODE_POLL);
-    esp_sntp_setservername(0, "ntp.aliyun.com");
-    sntp_init();
-
-    // 设置时区为中国标准时间 (UTC+8)
-    setenv("TZ", "CST-8", 1);
-    tzset();
-}
-
 
 // 核心：Wi-Fi 事件处理回调函数
 static void event_handler(void* arg, esp_event_base_t event_base,
