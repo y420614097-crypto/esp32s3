@@ -5,6 +5,7 @@
 #include "driver/spi_master.h"
 #include "driver/gpio.h"
 #include "esp_log.h"  // <--- 加上这一行
+#include "esp_lcd_touch_cst816s.h" // 引入触摸驱动
 
 // --- 硬件引脚配置 (只在这个文件里修改) ---
 #define PIN_NUM_RST     9
@@ -14,7 +15,29 @@
 #define PIN_NUM_CLK     18
 #define PIN_NUM_BK_LIGHT 5 // 背光引脚
 
+static lv_indev_t *g_touch_indev = NULL; // 全局触摸输入设备句柄
 static const char *TAG = "lcd_gc9a01";
+
+// 1. 触摸数据读取回调（LVGL 会定期调用这个函数获取坐标）
+static void touchpad_read(lv_indev_t *indev, lv_indev_data_t *data) {
+    uint16_t touch_x, touch_y;
+    uint8_t touch_cnt = 0;
+    
+    // 从底层驱动读取触摸状态
+    esp_lcd_touch_read_data(g_touch_handle); 
+    
+    // 获取第一个触摸点的坐标
+    bool touched = esp_lcd_touch_get_coordinates(g_touch_handle, &touch_x, &touch_y, NULL, &touch_cnt, 1);
+    
+    if (touched && touch_cnt > 0) {
+        data->point.x = touch_x;
+        data->point.y = touch_y;
+        data->state = LV_INDEV_STATE_PRESSED;
+    } else {
+        data->state = LV_INDEV_STATE_RELEASED;
+    }
+}
+
 
 esp_lcd_panel_handle_t lcd_gc9a01_init(void) {
     esp_lcd_panel_handle_t panel_handle = NULL;
@@ -68,4 +91,23 @@ esp_lcd_panel_handle_t lcd_gc9a01_init(void) {
 
     ESP_LOGI(TAG, "GC9A01 Init OK");
     return panel_handle;
+    // 【新增】初始化 CST816S 触摸
+    esp_lcd_panel_io_handle_t tp_io_handle = NULL;
+    esp_lcd_panel_io_i2c_config_t tp_io_config = ESP_LCD_TOUCH_IO_I2C_CST816S_CONFIG();
+    ESP_ERROR_CHECK(esp_lcd_new_panel_io_i2c((esp_lcd_i2c_bus_handle_t)1, &tp_io_config, &tp_io_handle));
+    
+    esp_lcd_touch_handle_t tp_handle = NULL;
+    esp_lcd_touch_config_t tp_cfg = {
+        .x_max = 240,
+        .y_max = 240,
+        .rst_gpio_num = GPIO_NUM_NC, // 根据你的硬件修改
+        .int_gpio_num = GPIO_NUM_NC, // 根据你的硬件修改
+    };
+    ESP_ERROR_CHECK(esp_lcd_touch_new_i2c_cst816s(tp_io_handle, &tp_cfg, &tp_handle));
+    g_touch_handle = tp_handle; // 保存句柄
+
+    // 【新增】将触摸注册到 LVGL
+    g_touch_indev = lv_indev_create();
+    lv_indev_set_type(g_touch_indev, LV_INDEV_TYPE_POINTER);
+    lv_indev_set_read_cb(g_touch_indev, touchpad_read);
 }
