@@ -23,38 +23,6 @@ void task_text_display(void *pvParameters) {
     }
 }
 
-// 时间搬运工任务
-void time_display_task(void *pvParameter) {
-    // 【修复 1】：正确的 5 秒超时等待写法（去掉了多余的参数）
-    EventBits_t bits = xEventGroupWaitBits(
-        time_event_group, 
-        TIME_SYNCED_BIT, 
-        pdFALSE, 
-        pdTRUE, 
-        pdMS_TO_TICKS(5000)  // 5秒超时
-    );
-
-    if(bits & TIME_SYNCED_BIT) {
-        ESP_LOGI(TAG, "时间同步成功，开始显示时间！");
-    } else {
-        ESP_LOGW(TAG, "等待时间同步超时，使用本地 RTC 时间！");
-    }
-
-    char time_str[32];
-    while (1) {
-        time_t now;
-        struct tm timeinfo;
-        time(&now);
-        localtime_r(&now, &timeinfo);
-        
-        // 【修复 2】：将单引号改为双引号
-        strftime(time_str, sizeof(time_str), "%H:%M:%S", &timeinfo);
-        
-        lcd_update_time(time_str);
-        vTaskDelay(pdMS_TO_TICKS(1000)); 
-    }
-}
-
 void app_main(void) {
     // 1. 启动 Wi-Fi 和时间同步（后台非阻塞运行）
     wifi_manager_init();
@@ -75,20 +43,14 @@ void app_main(void) {
         ESP_LOGW(TAG, "esp_task_wdt_init returned %d", wrc);
     }
     
-    // 4. 初始化 LVGL 并创建表盘
+    // 4. 初始化 LVGL 并创建纯指针表盘
     lcd_lvgl_init(panel);
     lcd_create_watch_ui(); 
     
-    // 【修复 3】：启动触摸初始化（如果你已经写了 lcd_touch_init）
-    // 如果你还没写，可以先注释掉这行，用定时器测试
-    lcd_touch_init(); 
+    // 【已删除】：lcd_touch_init(); （屏幕无触摸功能）
     
     // 5. 启动 LVGL 刷新任务
     xTaskCreate(task_text_display, "Lvgl_Task", 8192, (void *)panel, 5, NULL);
     
-    // 6. 启动时间更新任务
-    xTaskCreate(time_display_task, "Time_Task", 4096, NULL, 5, NULL); 
-    
-    // 【删除了】：auto_switch_timer_cb 和 lv_timer_create(auto_switch_timer_cb...)
-    // 因为现在由你在 lcd_display.c 中绑定的 LV_EVENT_GESTURE 手势事件来控制切换了！
+    // 【已删除】：time_display_task 任务（纯指针表盘由 LVGL 内部定时器自动更新，无需外部搬运时间）
 }
