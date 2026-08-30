@@ -2,5 +2,5 @@
 -fno-builtin-memcpy
 -fno-builtin-memset
 -fno-builtin-bzero
-"-specs=D:/esp32s3_new/gc9a01/build/specs/picolibc.specs"
+"-specs=C:/Users/Administrator/Desktop/esp32(1)/gc9a01/build/specs/picolibc.specs"
 -fno-rtti

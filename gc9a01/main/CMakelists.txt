@@ -23,4 +23,5 @@ idf_component_register(
         lwip                   
         lvgl 
         esp_lcd_gc9a01
+        
 )

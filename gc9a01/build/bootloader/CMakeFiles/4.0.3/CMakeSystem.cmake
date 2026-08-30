@@ -3,7 +3,7 @@ set(CMAKE_HOST_SYSTEM_NAME "Windows")
 set(CMAKE_HOST_SYSTEM_VERSION "10.0.19045")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "AMD64")
 
-include("D:/esp32s3_new/gc9a01/build/bootloader/toolchain/toolchain-esp32s3.cmake")
+include("C:/Users/Administrator/Desktop/esp32(1)/gc9a01/build/bootloader/toolchain/toolchain-esp32s3.cmake")
 
 set(CMAKE_SYSTEM "Generic")
 set(CMAKE_SYSTEM_NAME "Generic")

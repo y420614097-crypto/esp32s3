@@ -1,24 +1,16 @@
 /* Automatically generated file; DO NOT EDIT */
 /* Espressif IoT Development Framework Linker Script */
-/* Generated from: D:\esp32s3_new\gc9a01\build\esp-idf\esp_system\ld\sections.ld.in */
+/* Generated from: C:\Users\Administrator\Desktop\esp32(1)\gc9a01\build\esp-idf\esp_system\ld\sections.ld.in */
 
 /*
-
  * SPDX-FileCopyrightText: 2021 Espressif Systems (Shanghai) CO LTD
-
  *
-
  * SPDX-License-Identifier: Apache-2.0
-
  */
 /*
-
  * SPDX-FileCopyrightText: 2021-2024 Espressif Systems (Shanghai) CO LTD
-
  *
-
  * SPDX-License-Identifier: Apache-2.0
-
  */
 /*
 
@@ -32,15 +24,10 @@
 /* CPU instruction prefetch padding size for flash mmap scenario */
 /* Copy from esp_secure_boot.h */
 /*
-
  * PMP region granularity size
-
  * Software may determine the PMP granularity by writing zero to pmp0cfg, then writing all ones
-
  * to pmpaddr0, then reading back pmpaddr0. If G is the index of the least-significant bit set,
-
  * the PMP granularity is 2^G+2 bytes.
-
  */
 /* CPU instruction prefetch padding size for memory protection scenario */
 /* Memory alignment size for PMS */
@@ -50,11 +37,8 @@ ENTRY(call_start_cpu0);
 SECTIONS
 {
   /**
-
    * RTC fast memory holds RTC wake stub code,
-
    * including from any source file named rtc_wake_stub*.c
-
    */
   .rtc.text :
   {
@@ -78,13 +62,9 @@ SECTIONS
     _rtc_text_end = ABSOLUTE(.);
   } > rtc_iram_seg
   /**
-
    * This section located in RTC FAST Memory area.
-
    * It holds data marked with RTC_FAST_ATTR attribute.
-
    * See the file "esp_attr.h" for more information.
-
    */
   .rtc.force_fast :
   {
@@ -99,19 +79,12 @@ SECTIONS
  _rtc_force_fast_end = ABSOLUTE(.);
   } > rtc_data_seg
   /**
-
    * RTC data section holds RTC wake stub
-
    * data/rodata, including from any source file
-
    * named rtc_wake_stub*.c and the data marked with
-
    * RTC_DATA_ATTR, RTC_RODATA_ATTR attributes.
-
    * The memory location of the data is dependent on
-
    * CONFIG_ESP32S3_RTCDATA_IN_FAST_MEM option.
-
    */
   .rtc.data :
   {
@@ -135,19 +108,12 @@ SECTIONS
     _rtc_bss_end = ABSOLUTE(.);
   } > rtc_data_location
   /**
-
    * This section holds data that should not be initialized at power up
-
    * and will be retained during deep sleep.
-
    * User data marked with RTC_NOINIT_ATTR will be placed
-
    * into this section. See the file "esp_attr.h" for more information.
-
    * The memory location of the data is dependent on
-
    * CONFIG_ESP32S3_RTCDATA_IN_FAST_MEM option.
-
    */
   .rtc_noinit (NOLOAD):
   {
@@ -162,13 +128,9 @@ SECTIONS
  _rtc_noinit_end = ABSOLUTE(.);
   } > rtc_data_location
   /**
-
    * This section located in RTC SLOW Memory area.
-
    * It holds data marked with RTC_SLOW_ATTR attribute.
-
    * See the file "esp_attr.h" for more information.
-
    */
   .rtc.force_slow :
   {
@@ -181,13 +143,9 @@ SECTIONS
  _rtc_force_slow_end = ABSOLUTE(.);
   } > rtc_slow_seg
   /**
-
    * This section holds RTC data that should have fixed addresses.
-
    * The data are not initialized at power-up and are retained during deep
-
    * sleep.
-
    */
   .rtc_reserved (NOLOAD):
   {
@@ -195,15 +153,10 @@ SECTIONS
  . = ALIGN(4); 
  _rtc_reserved_start = ABSOLUTE(.);
     /**
-
      * New data can only be added here to ensure existing data are not moved.
-
      * Because data have adhered to the end of the segment and code is relied
-
      * on it.
-
      * >> put new data here <<
-
      */
     *(.rtc_timer_data_in_rtc_mem .rtc_timer_data_in_rtc_mem.*)
     KEEP(*(.bootloader_data_rtc_mem .bootloader_data_rtc_mem.*))
@@ -527,11 +480,8 @@ SECTIONS
  mutable[iram0_text]
   } > iram0_0_seg
   /**
-
    * This section is required to skip .iram0.text area because iram0_0_seg and
-
    * dram0_0_seg reflect the same address space on different buses.
-
    */
   .dram0.dummy (NOLOAD):
   {
@@ -621,15 +571,10 @@ SECTIONS
     _data_end = ABSOLUTE(.);
   } > dram0_0_seg
   /**
-
    * This section holds data that should not be initialized at power up.
-
    * The section located in Internal SRAM memory region. The macro _NOINIT
-
    * can be used as attribute to place data into this section.
-
    * See the "esp_attr.h" file for more information.
-
    */
   .noinit (NOLOAD):
   {
@@ -663,11 +608,8 @@ SECTIONS
   {
     _stext = .;
     /**
-
      * Mark the start of flash.text.
-
      * This can be used by the MMU driver to maintain the virtual address.
-
      */
     _instruction_reserved_start = ABSOLUTE(.);
     _text_start = ABSOLUTE(.);
@@ -724,44 +666,29 @@ SECTIONS
     *(.gnu.linkonce.literal.* .gnu.linkonce.t.*.literal .gnu.linkonce.t.*)
     *(.irom0.text) /* catch stray ICACHE_RODATA_ATTR */
     /**
-
      * CPU will try to prefetch up to 16 bytes of of instructions.
-
      * This means that any configuration (e.g. MMU, PMS) must allow
-
      * safe access to up to 16 bytes after the last real instruction, add
-
      * dummy bytes to ensure this
-
      */
     . += 16;
     _text_end = ABSOLUTE(.);
     /**
-
      * Mark the flash.text end.
-
      * This can be used for MMU driver to maintain virtual address.
-
      */
     _instruction_reserved_end = ABSOLUTE(.);
     _etext = .;
     /**
-
      * Similar to _iram_start, this symbol goes here so it is
-
      * resolved by addr2line in preference to the first symbol in
-
      * the flash.text segment.
-
      */
     _flash_cache_start = ABSOLUTE(0);
   } > default_code_seg
   /**
-
    * Dummy section represents the .flash.text section but in default_rodata_seg.
-
    * Thus, it must have its alignment and (at least) its size.
-
    */
   .flash_rodata_dummy (NOLOAD):
   {
@@ -773,11 +700,8 @@ SECTIONS
   .flash.appdesc : ALIGN(0x10)
   {
     /**
-
      * Mark flash.rodata start.
-
      * This can be used for mmu driver to maintain virtual address
-
      */
     _rodata_reserved_start = ABSOLUTE(.);
     _rodata_start = ABSOLUTE(.);
@@ -787,13 +711,9 @@ SECTIONS
     /* Should be the second. Custom app version info. */
     *(.rodata_custom_desc .rodata_custom_desc.*)
     /**
-
      * Create an empty gap within this section. Thanks to this, the end of this
-
      * section will match .flah.rodata's begin address. Thus, both sections
-
      * will be merged when creating the final bin image.
-
      */
     . = ALIGN(ALIGNOF(.flash.rodata));
   } > default_rodata_seg
@@ -831,13 +751,9 @@ SECTIONS
     __XT_EXCEPTION_DESCS_END__ = ABSOLUTE(.);
     *(.xt_except_desc_end)
     /**
-
      * C++ constructor tables.
-
      *
-
      * Excluding crtbegin.o/crtend.o since IDF doesn't use the toolchain crt.
-
      */
     
  . = ALIGN(4); 
@@ -879,13 +795,9 @@ SECTIONS
   .flash.tdata :
   {
     /* Keep tdata and tbss sections contiguous (no gaps between them).
-
      * The TLS runtime code calculates offsets assuming these sections are
-
      * adjacent. Gaps would cause incorrect address calculations, leading
-
      * to accessing wrong memory.
-
      */
     /* tdata sections */
     _thread_local_data_start = ABSOLUTE(.);
@@ -909,22 +821,15 @@ SECTIONS
   ASSERT(_thread_local_data_end == _thread_local_bss_start,
          "tdata and tbss must be contiguous.")
   /**
-
    * This section contains all the rodata that is not used
-
    * at runtime, helping to avoid an increase in binary size.
-
    */
   .flash.rodata_noload (NOLOAD) :
   {
     /**
-
      * This symbol marks the end of flash.rodata. It can be utilized by the MMU
-
      * driver to maintain the virtual address.
-
      * NOLOAD rodata may not be included in this section.
-
      */
     _rodata_reserved_end = ABSOLUTE(.);
     
@@ -933,11 +838,8 @@ SECTIONS
  mutable[rodata_noload]
   } > default_rodata_seg
   /**
-
    * Dummy section to skip flash rodata sections.
-
    * Because to `extern_ram_seg` and `drom0_0_seg` are on the same bus
-
    */
   .ext_ram.dummy (NOLOAD):
   {
@@ -989,36 +891,24 @@ SECTIONS
  _heap_low_start = ABSOLUTE(.);
   } > dram0_0_seg
 /*
-
  * SPDX-FileCopyrightText: 2021-2024 Espressif Systems (Shanghai) CO LTD
-
  *
-
  * SPDX-License-Identifier: Apache-2.0
-
  */
 /* CPU instruction prefetch padding size for flash mmap scenario */
 /* Copy from esp_secure_boot.h */
 /*
-
  * PMP region granularity size
-
  * Software may determine the PMP granularity by writing zero to pmp0cfg, then writing all ones
-
  * to pmpaddr0, then reading back pmpaddr0. If G is the index of the least-significant bit set,
-
  * the PMP granularity is 2^G+2 bytes.
-
  */
 /* CPU instruction prefetch padding size for memory protection scenario */
 /* Memory alignment size for PMS */
     /* rtc timer data (s_rtc_timer_retain_mem, see esp_clk.c files). For rtc_timer_data_in_rtc_mem section. */
   /**
-
    * This section is not included in the binary image; it is only present in the ELF file.
-
    * It is used to keep certain symbols in the ELF file.
-
    */
   .noload 0 (INFO) :
   {
@@ -1070,56 +960,36 @@ SECTIONS
   .debug_rnglists 0 : { *(.debug_rnglists) }
   .debug_str_offsets 0 : { *(.debug_str_offsets) }
   /**
-
    * Miscellaneous sections
-
    */
   .comment 0 : { *(.comment) }
   .note.GNU-stack 0 : { *(.note.GNU-stack) }
   .riscv.attributes 0 : { *(.riscv.attributes) }
 /**
-
  * .xt.prop and .xt.lit sections will be used by the debugger and disassembler
-
  * to get more information about raw data present in the code.
-
  * Indeed, it may be required to add some padding at some points in the code
-
  * in order to align a branch/jump destination on a particular bound.
-
  * Padding these instructions will generate null bytes that shall be
-
  * interpreted as data, and not code by the debugger or disassembler.
-
  * This section will only be present in the ELF file, not in the final binary
-
  * For more details, check GCC-212
-
  */
   .xtensa.info 0 : { *(.xtensa.info) }
   .xt.prop 0 : { *(.xt.prop .xt.prop.* .gnu.linkonce.prop.*) }
   .xt.lit 0 : { *(.xt.lit .xt.lit.* .gnu.linkonce.p.*) }
 /*
-
  * SPDX-FileCopyrightText: 2021-2024 Espressif Systems (Shanghai) CO LTD
-
  *
-
  * SPDX-License-Identifier: Apache-2.0
-
  */
 /* CPU instruction prefetch padding size for flash mmap scenario */
 /* Copy from esp_secure_boot.h */
 /*
-
  * PMP region granularity size
-
  * Software may determine the PMP granularity by writing zero to pmp0cfg, then writing all ones
-
  * to pmpaddr0, then reading back pmpaddr0. If G is the index of the least-significant bit set,
-
  * the PMP granularity is 2^G+2 bytes.
-
  */
 /* CPU instruction prefetch padding size for memory protection scenario */
 /* Memory alignment size for PMS */
@@ -1127,15 +997,10 @@ SECTIONS
   /DISCARD/ :
   {
    /**
-
     * Discarding .rela.* sections results in the following mapping:
-
     * .rela.text.* -> .text.*
-
     * .rela.data.* -> .data.*
-
     * And so forth...
-
     */
    *(.rela.*)
    *(.fini)

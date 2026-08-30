@@ -1,2 +1,2 @@
-source D:/esp32s3_new/gc9a01/build/bootloader/gdbinit/symbols
-source D:/esp32s3_new/gc9a01/build/bootloader/gdbinit/connect
+source C:/Users/Administrator/Desktop/esp32(1)/gc9a01/build/bootloader/gdbinit/symbols
+source C:/Users/Administrator/Desktop/esp32(1)/gc9a01/build/bootloader/gdbinit/connect
