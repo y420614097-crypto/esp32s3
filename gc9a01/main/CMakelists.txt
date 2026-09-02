@@ -1,14 +1,15 @@
 idf_component_register(
-    SRCS 
-        "gc_main.c" 
-        "drivers/lcd_gc9a01.c" 
+    SRCS
+        "gc_main.c"
+        "drivers/lcd_gc9a01.c"
+        "drivers/button_ctrl.c"
         "app/lcd_display.c"
-        "app/time_sync.c"              
+        "app/time_sync.c"
         "app/wifi_manager.c"
-    
-    INCLUDE_DIRS 
-        "." 
-        "drivers" 
+
+    INCLUDE_DIRS
+        "."
+        "drivers"
         "app"
 
     PRIV_REQUIRES 
